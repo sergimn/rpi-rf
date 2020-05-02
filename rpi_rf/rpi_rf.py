@@ -255,5 +255,6 @@ class RFDevice:
     def _sleep(self, delay):      
         _delay = delay / 100
         end = time.time() + delay - _delay
+        time.sleep(_delay)
         while time.time() < end:
-            time.sleep(_delay)
+            pass
